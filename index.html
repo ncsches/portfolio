@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick Schiemenz | Execution Log & Portfolio</title>
+  
+
+  <style>
+  
+	/* Inter */
+	  @font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 300;
+		font-display: swap;
+		src: url('fonts/inter-300.woff2') format('woff2');
+	  }
+	  @font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('fonts/inter-400.woff2') format('woff2');
+	  }
+	  @font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url('fonts/inter-500.woff2') format('woff2');
+	  }
+	  @font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 600;
+		font-display: swap;
+		src: url('fonts/inter-600.woff2') format('woff2');
+	  }
+	  @font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('fonts/inter-700.woff2') format('woff2');
+	  }
+
+	  /* JetBrains Mono */
+	  @font-face {
+		font-family: 'JetBrains Mono';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('fonts/jetbrains-mono-400.woff2') format('woff2');
+	  }
+	  @font-face {
+		font-family: 'JetBrains Mono';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url('fonts/jetbrains-mono-500.woff2') format('woff2');
+	  }
+	  @font-face {
+		font-family: 'JetBrains Mono';
+		font-style: normal;
+		font-weight: 600;
+		font-display: swap;
+		src: url('fonts/jetbrains-mono-600.woff2') format('woff2');
+	  }
+  
+    :root {
+      /* Slate Cobalt Palette (Light Mode Defaults) */
+      --accent-deep: #1e3a8a;       /* Deep Corporate Navy */
+      --accent-active: #2563eb;     /* Crisp Cobalt Blue */
+      --accent-glow: rgba(37, 99, 235, 0.18);
+      --accent-subtle: #eff6ff;     /* Soft Tint */
+
+      --bg-page: #f8fafc;
+      --bg-gradient: radial-gradient(circle at 50% 0%, rgba(219, 234, 254, 0.45) 0%, rgba(248, 250, 252, 0) 70%);
+      --surface: #ffffff;
+      --surface-elevated: #ffffff;
+      --surface-subtle: #f1f5f9;
+      
+      --border-light: #e2e8f0;
+      --border-focus: #cbd5e1;
+      --border-active: #93c5fd;
+
+      --text-main: #0f172a;        /* Slate 900 */
+      --text-muted: #475569;       /* Slate 600 */
+      --text-dim: #94a3b8;         /* Slate 400 */
+
+      --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.03);
+      --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+      --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.04);
+      --shadow-stack: 0 25px 50px -12px rgba(30, 58, 138, 0.15);
+
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: "JetBrains Mono", "SF Mono", monospace;
+      
+      --max-width: 680px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+    }
+
+    [data-theme="dark"],
+    html:not([data-theme="light"]) {
+      @media (prefers-color-scheme: dark) {
+        --accent-deep: #60a5fa;
+        --accent-active: #3b82f6;
+        --accent-glow: rgba(59, 130, 246, 0.28);
+        --accent-subtle: rgba(59, 130, 246, 0.12);
+
+        --bg-page: #0b0f19;
+        --bg-gradient: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.25) 0%, rgba(11, 15, 25, 0) 65%);
+        --surface: #111827;
+        --surface-elevated: #162032;
+        --surface-subtle: #1e293b;
+
+        --border-light: #1f293d;
+        --border-focus: #334155;
+        --border-active: #3b82f6;
+
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --text-dim: #64748b;
+
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 20px 35px -10px rgba(0, 0, 0, 0.65);
+        --shadow-stack: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.1);
+      }
+    }
+
+    [data-theme="dark"] {
+      --accent-deep: #60a5fa;
+      --accent-active: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.28);
+      --accent-subtle: rgba(59, 130, 246, 0.12);
+
+      --bg-page: #0b0f19;
+      --bg-gradient: radial-gradient(circle at 50% 0%, rgba(30, 58, 138, 0.25) 0%, rgba(11, 15, 25, 0) 65%);
+      --surface: #111827;
+      --surface-elevated: #162032;
+      --surface-subtle: #1e293b;
+
+      --border-light: #1f293d;
+      --border-focus: #334155;
+      --border-active: #3b82f6;
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 20px 35px -10px rgba(0, 0, 0, 0.65);
+      --shadow-stack: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      background-image: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 16px;
+      padding: 3rem 1.25rem 6rem;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero {
+      margin-bottom: 3.75rem;
+    }
+
+    .hero-lead-motto {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+    .hero-lead-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-active);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: inline-block;
+    }
+
+    .hero-lead-title {
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.3;
+      color: var(--text-main);
+    }
+
+    .hero-lead-title span {
+      color: var(--accent-active);
+    }
+
+    .stack-wrapper {
+      position: relative;
+      width: 100%;
+      height: 360px;
+      margin: 0 auto 1.5rem;
+      user-select: none;
+      perspective: 1200px;
+      touch-action: pan-y pinch-zoom;
+    }
+
+    .photo-stack {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .stack-card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background-color: var(--surface);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-stack);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                  opacity 0.45s ease, 
+                  filter 0.45s ease, 
+                  box-shadow 0.35s ease;
+      will-change: transform, opacity;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stack-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .stack-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .photo-stack:hover .stack-card[data-pos="0"] img {
+      transform: scale(1.025);
+    }
+
+    .card-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.75rem 1.2rem;
+      background: linear-gradient(0deg, 
+        rgba(11, 15, 25, 0.92) 0%, 
+        rgba(11, 15, 25, 0.6) 60%, 
+        transparent 100%);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      z-index: 3;
+    }
+
+    .caption-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .caption-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      opacity: 0.9;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stack-card[data-pos="0"] {
+      transform: translateY(0) scale(1) rotate(0deg);
+      z-index: 3;
+      opacity: 1;
+      filter: blur(0px);
+    }
+
+    .stack-card[data-pos="1"] {
+      transform: translateY(14px) scale(0.955) rotate(2.2deg);
+      z-index: 2;
+      opacity: 0.88;
+      filter: blur(0.3px);
+    }
+
+    .stack-card[data-pos="2"] {
+      transform: translateY(26px) scale(0.91) rotate(-2.4deg);
+      z-index: 1;
+      opacity: 0.65;
+      filter: blur(0.8px);
+    }
+
+    .stack-card.flipping {
+      transform: translateY(-55px) scale(1.06) rotate(-7deg) !important;
+      opacity: 0 !important;
+      filter: blur(2px) !important;
+      z-index: 4 !important;
+    }
+
+    .hero-meta {
+      margin-top: 2rem;
+    }
+
+    .hero-meta-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.6rem;
+    }
+
+    .hero-meta h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    .hero-intro {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .section-wrap {
+      margin-bottom: 4rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    details.acc-item {
+      background-color: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    details.acc-item:hover {
+      border-color: var(--border-focus);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    details.acc-item[open] {
+      border-color: var(--accent-active);
+      box-shadow: var(--shadow-md), 0 0 0 1px var(--accent-active);
+      background-color: var(--surface-elevated);
+    }
+
+    summary.acc-summary {
+      list-style: none;
+      padding: 1.2rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.85rem;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    summary.acc-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .acc-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1;
+    }
+
+    .acc-chevron {
+      color: var(--text-dim);
+      transition: transform 0.25s ease, color 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    details[open] .acc-chevron {
+      transform: rotate(90deg);
+      color: var(--accent-active);
+    }
+
+    .acc-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: -0.015em;
+    }
+
+    .acc-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+
+    .pill-blue { 
+      background: var(--accent-subtle); 
+      color: var(--accent-active); 
+      border-color: var(--accent-glow);
+    }
+    
+    .pill-amber { 
+      background: rgba(245, 158, 11, 0.12); 
+      color: #d97706; 
+      border-color: rgba(245, 158, 11, 0.25);
+    }
+
+    .acc-body {
+      padding: 0 1.25rem 1.35rem 2.85rem;
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      animation: expandContent 0.22s ease-out;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+      margin-top: -0.25rem;
+    }
+
+    @keyframes expandContent {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .learnings-wrap {
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed var(--border-light);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .mono-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-light);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .learning-insight {
+      font-size: 0.86rem;
+      color: var(--text-dim);
+      line-height: 1.45;
+    }
+
+    .learning-insight strong {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .task-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .task-desc {
+      flex: 1;
+    }
+
+    .task-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .task-done {
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .task-prog {
+      background: var(--accent-subtle);
+      color: var(--accent-active);
+      border: 1px solid var(--accent-glow);
+    }
+
+    .task-plan {
+      background: var(--surface-subtle);
+      color: var(--text-dim);
+      border: 1px solid var(--border-light);
+    }
+
+    .log-container {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .log-item {
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      padding: 1.1rem 1.25rem;
+      border-bottom: 1px solid var(--border-light);
+      align-items: baseline;
+      gap: 1rem;
+      transition: background-color 0.15s ease, transform 0.15s ease;
+      position: relative;
+    }
+
+    .log-item:last-child {
+      border-bottom: none;
+    }
+
+    .log-item:hover {
+      background-color: var(--surface-subtle);
+    }
+
+    .log-time {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--accent-active);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .log-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--border-focus);
+    }
+
+    .log-item:hover .log-dot {
+      background-color: var(--accent-active);
+    }
+
+    .log-name {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.2rem;
+    }
+
+    .log-summary {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      padding-top: 2.25rem;
+      border-top: 1px solid var(--border-light);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    footer a,
+    .footer-btn {
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      transition: all 0.15s;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    footer a:hover,
+    .footer-btn:hover {
+      color: var(--accent-active);
+      background: var(--accent-subtle);
+    }
+
+    /* Modal Dialog für Rechtliches */
+    dialog.legal-modal {
+      margin: auto;
+      max-width: 600px;
+      width: 92vw;
+      max-height: 85vh;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      color: var(--text-main);
+      box-shadow: var(--shadow-lg);
+      padding: 0;
+      overflow: hidden;
+    }
+
+    dialog.legal-modal::backdrop {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .modal-shell {
+      display: flex;
+      flex-direction: column;
+      max-height: 85vh;
+    }
+
+    .modal-header {
+      padding: 1.15rem 1.35rem;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface-elevated);
+    }
+
+    .modal-header h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .modal-close-btn {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-light);
+      border-radius: 6px;
+      font-size: 1.25rem;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.15s ease;
+      line-height: 1;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--text-main);
+      border-color: var(--accent-active);
+    }
+
+    .modal-body {
+      padding: 1.35rem;
+      overflow-y: auto;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .modal-body h4 {
+      font-size: 0.98rem;
+      color: var(--text-main);
+      margin: 1.2rem 0 0.4rem;
+    }
+
+    .modal-body h4:first-child {
+      margin-top: 0;
+    }
+
+    .dialog-placeholder-box {
+      background: var(--surface-subtle);
+      border: 1px dashed var(--border-focus);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      margin: 0.6rem 0 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 540px) {
+      body {
+        padding: 2rem 1rem 4rem;
+      }
+      .stack-wrapper {
+        height: 310px;
+      }
+      .log-item {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+      .acc-body {
+        padding-left: 1.25rem;
+      }
+      .hero-meta h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+ <meta name="robots" content="noindex, nofollow">
+<body>
+
+  <div class="container">
+
+    <main class="hero">
+      
+      <!-- Lead Motto above the visual stack -->
+      <div class="hero-lead-motto">
+        <span class="hero-lead-eyebrow">Execution Mindset</span>
+        <h2 class="hero-lead-title">
+          Vom Konzept zur Umsetzung – <span>Geplant. Berechnet. Optimiert.</span>
+        </h2>
+      </div>
+
+	  <!-- Interactive Card Stack with Depth, Auto-Cycle & Swipe -->
+      <div class="stack-wrapper" id="photoStack" role="region" aria-label="Fotostapel persönlicher Projekte" title="Tippen zum manuellen Wechseln">
+        <div class="photo-stack">
+
+          <!-- Card 1: Sport / Halbmarathon -->
+          <div class="stack-card" data-pos="0">
+            <img src="images/halbmarathon.jpg" alt="Halbmarathon Vorbereitung und Leistungsdaten" loading="eager">
+            <div class="card-caption">
+              <span class="caption-title">Halbmarathon Vorbereitung</span>
+              <span class="caption-tag">Kontinuität & Training</span>
+            </div>
+          </div>
+
+          <!-- Card 2: RC Car & Telemetrie -->
+          <div class="stack-card" data-pos="1">
+            <img src="images/rc-car.jpg" alt="RC Setup und Werkstatt" loading="lazy">
+            <div class="card-caption">
+              <span class="caption-title">1:8 RC-Car Setup</span>
+              <span class="caption-tag">Telemetrie & Kaizen</span>
+            </div>
+          </div>
+
+          <!-- Card 3: DIY / Motorrad & Werkstatt -->
+          <div class="stack-card" data-pos="2">
+            <img src="images/motorrad.jpg" alt="Motorrad Demontage und Analyse" loading="lazy">
+            <div class="card-caption">
+              <span class="caption-title">Motorradmechanik & Teileverwertung</span>
+              <span class="caption-tag">Hands-on Execution</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Hero Meta -->
+      <div class="hero-meta">
+        <div class="hero-meta-header">
+          <h1>Nick Schiemenz</h1>
+          <div class="hero-lead-eyebrow">Planung &bull; Ausführung &bull; Management</div>
+        </div>
+        
+        <p class="hero-intro">
+          Ich brauche Bewegung, Verantwortung und hohe Taktung – Leerlauf ist für mich keine Option. Ich neige eher dazu, nach zusätzlichen Herausforderungen zu suchen, als mich von hohem Workload aus der Ruhe bringen zu lassen. Eigene Projekte sind für mich kein bloßer Zeitvertreib, sondern eine Möglichkeit, meinen Tatendrang umzusetzen und neuen Lernraum zu schaffen. Alles, was ich in der Praxis ausprobiere, schärft meine Perspektive. 
+          <br><br>
+          Dabei muss ich nicht jedes Detail beherrschen. Meist reicht ein Grundverständnis, um Zusammenhänge zu durchdringen und zu wissen, worauf es ankommt. Mich faszinieren Organisation, Strategie und Prozessstrukturen – das Erkennen der Hebel im Hintergrund, die aus einzelnen Schnittstellen und Komponenten ein funktionierendes Gesamtsystem machen.
+        </p>
+      </div>
+
+    </main>
+
+    <section class="section-wrap">
+      <div class="section-header">
+        <span class="section-label">01 // aktuell in Arbeit</span>
+      </div>
+
+      <div class="accordion-list">
+        <!-- Item 1: Halbmarathon -->
+        <details class="acc-item">
+          <summary class="acc-summary">
+            <div class="acc-header-left">
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+              <span class="acc-title">Halbmarathon-Vorbereitung</span>
+            </div>
+            <span class="acc-pill pill-blue">In Training</span>
+          </summary>
+          <div class="acc-body">
+            <ul class="task-list">
+              <li class="task-item">
+                <span class="task-badge task-done">DONE</span>
+                <span class="task-desc">Strukturierter Trainingsplan mit Fokus auf Belastungssteuerung erstellt</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-done">DONE</span>
+                <span class="task-desc">Ernährung & Regeneration angepasst</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-prog">IN WORK</span>
+                <span class="task-desc">Kontinuierliche Überwachung per Telemetrie (HFV, Zone-2-Pace)</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-plan">PLANNED</span>
+                <span class="task-desc">Halbmarathon laufen</span>
+              </li>
+            </ul>
+
+            <div class="learnings-wrap">
+              <p class="learning-insight">
+                <strong>Erkenntnis:</strong> Kontinuität und Belastungssteuerung schlagen kurzfristige Überlastung – „Es ist kein Sprint, sondern ein (Halb-)Marathon.“
+              </p>
+              <div class="tags-row">
+                <span class="mono-tag">#HFV-Analyse</span>
+                <span class="mono-tag">#Zone-2-Pacing</span>
+                <span class="mono-tag">#Ernährung</span>
+                <span class="mono-tag">#Belastungssteuerung</span>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Item 2: RC Car -->
+        <details class="acc-item">
+          <summary class="acc-summary">
+            <div class="acc-header-left">
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+              <span class="acc-title">1:8 Car Building & Racing</span>
+            </div>
+            <span class="acc-pill pill-blue">Building</span>
+          </summary>
+          <div class="acc-body">
+            <ul class="task-list">
+              <li class="task-item">
+                <span class="task-badge task-done">DONE</span>
+                <span class="task-desc">Wiedereinstieg im Verein: Bestandsaufnahme des vorhandenen Setups</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-prog">IN WORK</span>
+                <span class="task-desc">Aufbau eines Zeitmesssystems für die neue Vereinsstrecke</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-plan">PLANNED</span>
+                <span class="task-desc">Systematische Fahrzeugoptimierung (Dämpferöle, Diff-Viskositäten, Rollcenter, Leistungskurve, Reifen) für reproduzierbare Rundenzeiten</span>
+              </li>
+            </ul>
+
+            <div class="learnings-wrap">
+              <p class="learning-insight">
+                <strong>Erkenntnis:</strong> Ein Wiedereinstieg bringt oft mehr Hürden mit sich als gedacht – durch stückweises, systematisches Abarbeiten geht es verlässlich vorwärts.
+              </p>
+              <div class="tags-row">
+                <span class="mono-tag">#Fahrwerksgeometrie</span>
+                <span class="mono-tag">#Instandhaltung</span>
+                <span class="mono-tag">#Setup Auswahl</span>
+                <span class="mono-tag">#Iteratives-Testing</span>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Item 3: Motorrad Pivot -->
+        <details class="acc-item">
+          <summary class="acc-summary">
+            <div class="acc-header-left">
+              <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+              <span class="acc-title">Unfallmotorrad: Restauration ➔ Teileverwertung</span>
+            </div>
+            <span class="acc-pill pill-amber">Pivoted</span>
+          </summary>
+          <div class="acc-body">
+            <p style="margin-bottom: 0.85rem; font-size: 0.92rem; color: var(--text-muted);">
+              Ursprünglich für einen Wiederaufbau erworben. Nach genauer Kosten-Nutzen-Prüfung folgte ein konsequenter Strategiewechsel auf Demontage und margenstarken Einzelteilverkauf.
+            </p>
+
+            <ul class="task-list">
+              <li class="task-item">
+                <span class="task-badge task-done">DONE</span>
+                <span class="task-desc">Basis erworben & Zustandsanalyse durchgeführt</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-done">DONE</span>
+                <span class="task-desc">Unwirtschaftlichkeit des Komplettaufbaus festgestellt & Strategie angepasst</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-prog">IN WORK</span>
+                <span class="task-desc">Vollständige fachgerechte Demontage</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-plan">PLANNED</span>
+                <span class="task-desc">Katalogisieren, Zustandserfassung und Inventur aller Baugruppen</span>
+              </li>
+              <li class="task-item">
+                <span class="task-badge task-plan">PLANNED</span>
+                <span class="task-desc">Inserieren und margenoptimierter Verkauf der Einzelteile</span>
+              </li>
+            </ul>
+
+            <div class="learnings-wrap">
+              <p class="learning-insight">
+                <strong>Erkenntnis:</strong> Wenn der ursprüngliche Plan nicht mehr wirtschaftlich ist, muss rational und agil umgeplant werden, um das Optimum aus den Ressourcen herauszuholen.
+              </p>
+              <div class="tags-row">
+                <span class="mono-tag">#Kosten-Nutzen-Analyse</span>
+                <span class="mono-tag">#Demontage & Inventur</span>
+                <span class="mono-tag">#Teile-Verkauf</span>
+                <span class="mono-tag">#Restwertermittlung</span>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section-wrap">
+      <div class="section-header">
+        <span class="section-label">02 // Abschluss Log</span>
+      </div>
+
+      <div class="log-container">
+        <div class="log-item">
+          <span class="log-time"><span class="log-dot"></span>2026</span>
+          <div>
+            <div class="log-name">Messersatz aus Kreissägeblatt</div>
+            <div class="log-summary">Upcycling & Fertigung: Entwurf und Design, Werkstoffanalyse, Bearbeitung, Wärmebehandlung</div>
+          </div>
+        </div>
+        
+        <div class="log-item">
+          <span class="log-time"><span class="log-dot"></span>2026</span>
+          <div>
+            <div class="log-name">Auslandssemester & Expedition (Mexiko)</div>
+            <div class="log-summary">Interkulturelle Resilienz: Selbstorganisation im fremdsprachigen Raum, Navigation unvorhergesehener Hürden.</div>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <span class="log-time"><span class="log-dot"></span>2022–26</span>
+          <div>
+            <div class="log-name">Formula Student (TL & Techn. Leitung)</div>
+            <div class="log-summary">Leadership & Budget: 4 Jahre Teamverantwortung, CAD/CAM-Freigaben, Schnittstellenmanagement unter harten Deadlines.</div>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <span class="log-time"><span class="log-dot"></span>2025</span>
+          <div>
+            <div class="log-name">Chemisches Handwerk: Seifensieden</div>
+            <div class="log-summary">Prozessdisziplin: Rezepturentwicklung (Rasier-, Dusch- & Handseife), Verseifungsrechnungen, Sicherheits- und Reifeprozesse.</div>
+          </div>
+        </div>
+
+        <div class="log-item">
+          <span class="log-time"><span class="log-dot"></span>2024</span>
+          <div>
+            <div class="log-name">Motorrad-Revision & TÜV-Einzelabnahme</div>
+            <div class="log-summary">Compliance & Handwerk: Vollständige Überholung (Bremssystem, Elektrik) und Abnahme nach §21 StVZO.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>&copy; Nick Schiemenz</span>
+      <div class="footer-links">
+        <a href="mailto:nickschiemenz@gmail.com">E-Mail</a> &bull; 
+        <a href="https://www.linkedin.com/in/nick-schiemenz" target="_blank" rel="noopener">LinkedIn</a> &bull;
+        <button type="button" class="footer-btn" data-legal="impressum">Impressum</button> &bull;
+        <button type="button" class="footer-btn" data-legal="datenschutz">Datenschutz</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Rechtliches Popup (HTML dialog) -->
+  <dialog id="legalModal" class="legal-modal">
+    <div class="modal-shell">
+      <div class="modal-header">
+        <h3 id="legalModalTitle">Rechtliche Angaben</h3>
+        <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Bereich Impressum -->
+        <div id="legalSectionImpressum">
+          <h4>Impressum</h4>
+          <p><strong>Angaben gemäß § 5 DDG:</strong></p>
+          <div class="dialog-placeholder-box">
+            Nick Schiemenz<br>
+            Großer Lückenweg 6<br>
+            75175 Pforzheim<br>
+            Deutschland
+          </div>
+
+          <h4>Kontakt</h4>
+          <div class="dialog-placeholder-box">
+            E-Mail: nickschiemenz@gmail.com<br>
+			Telefon: +49 (0) 151 41607364
+          </div>
+
+		  <h4> Verbraucherstreitbeilegung / Universalschlichtungsstelle </h4>
+			<div class="dialog-placeholder-box">
+            Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil und sind dazu auch nicht verpflichtet.
+          </div>
+
+<!--         <h4>Haftungsausschluss:</h4>
+		  <h4>Haftung für Inhalte</h4>
+          <div class="dialog-placeholder-box">
+            Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen. Als Diensteanbieter bin ich gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.
+			<br><br>Erstellt mit dem Impressum-Generator von WebsiteWissen.com, dem Ratgeber für Website-Erstellung, Homepage-Baukästen und Shopsysteme. Rechtstext von der Kanzlei Hasselbach.
+          </div>
+-->
+		</div>
+
+		<!-- Bereich Datenschutz -->
+        <div id="legalSectionDatenschutz" style="display: none;">
+          <h4>Datenschutzerklärung</h4>
+
+          <!-- 1. Datenschutz auf einen Blick -->
+          <h4>1. Datenschutz auf einen Blick</h4>
+          
+          <p><strong>Allgemeine Hinweise</strong></p>
+          <p>
+            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
+          </p>
+
+          <p><strong>Datenerfassung auf dieser Website</strong></p>
+          <p>
+            <em>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</em><br>
+            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.
+          </p>
+          <p>
+            <em>Wie erfassen wir Ihre Daten?</em><br>
+            Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
+			<br>Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+
+          </p>
+          <p>
+            <em>Wofür nutzen wir Ihre Daten?</em><br>
+            Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden. Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die übermittelten Daten auch für Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet.
+          </p>
+          <p>
+            <em>Welche Rechte haben Sie bezüglich Ihrer Daten?</em><br>
+            Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
+			<br>Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.
+
+          </p>
+
+          <p><strong>Analyse-Tools und Tools von Drittanbietern</strong></p>
+          <p>
+            Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit sogenannten Analyseprogrammen.
+			<br>Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerklärung.
+
+          </p>
+
+          <!-- 2. Hosting -->
+          <h4>2. Hosting</h4>
+          <p>
+            Wir hosten die Inhalte unserer Website extern. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei handelt es sich vor allem um IP-Adresse, die Adresse der vorher besuchten Website (Referer Anfrage-Header), Datum und Uhrzeit der Anfrage, Zeitzonendifferenz zur Greenwich Mean Time, Inhalt der Anforderung, HTTP-Statuscode, übertragene Datenmenge, Website, von der die Anforderung kommt und Informationen zu Browser und Betriebssystem. 
+          </p>
+          <p>
+            Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). 
+			<br>Wir haben mit dem Anbieter einen Vertrag über die Auftragsverarbeitung (Data Protection Agreement) abgeschlossen. Dieser gewährleistet, dass der Hoster die Daten der Webseitenbesucher nur insoweit verarbeitet, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und die Daten nicht an Dritte weitergibt. Wir selbst haben auf diese Server-Logdaten keinen direkten Zugriff.
+
+          </p>
+
+          <div class="dialog-placeholder-box">
+            <strong>Eingesetzter Hoster:</strong><br>
+            GitHub Inc.<br>
+            88 Colin P Kelly Jr St<br>
+            San Francisco, CA 94107<br>
+            United States
+          </div>
+
+          <p><strong>Drittlandstransfer (USA):</strong></p>
+          <p>
+            Der Serverstandort des Hosters liegt in den USA. Die Datenübermittlung in die USA wird auf Grundlage des Angemessenheitsbeschlusses der Europäischen Kommission, dem EU-U.S. Data Privacy Framework (DPF), abgesichert, für das GitHub Inc. zertifiziert ist. Zudem kommen standardmäßig die EU-Standardvertragsklauseln zum Einsatz.
+			<br>Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie unter: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages
+
+          </p>
+          <p>
+            Sie haben das Recht der Verarbeitung zu widersprechen. Ob der Widerspruch erfolgreich ist, ist im Rahmen einer Interessenabwägung zu ermitteln. Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.
+          </p>
+
+          <!-- 3. Allgemeine Hinweise und Pflichtinformationen -->
+          <h4>3. Allgemeine Hinweise und Pflichtinformationen</h4>
+          
+          <p><strong>Datenschutz</strong></p>
+          <p>
+            Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+			<br>Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.
+			<br>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+
+          </p>
+
+          <h4>Hinweis zur verantwortlichen Stelle</h4>
+          <div class="dialog-placeholder-box">
+            Nick Schiemenz<br>
+            Großer Lückenweg 6<br>
+            D-75175 Pforzheim<br>
+            Telefon: +49 (0) 15141607364<br>
+            E-Mail: nickschiemenz@gmail.com
+          </div>
+          <p>
+            Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
+          </p>
+
+          <p><strong>Speicherdauer</strong></p>
+          <p>
+            Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z.B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
+          </p>
+
+          <p><strong>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</strong></p>
+          <p>
+            Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr Endgerät (z.B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind, auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser Datenschutzerklärung informiert.
+          </p>
+
+          <p><strong>Empfänger von personenbezogenen Daten</strong></p>
+          <p>
+            Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen externen Stellen zusammen. Dabei ist teilweise auch eine Übermittlung von personenbezogenen Daten an diese externen Stellen erforderlich. Wir geben personenbezogene Daten nur dann an externe Stellen weiter, wenn dies im Rahmen einer Vertragserfüllung erforderlich ist, wenn wir gesetzlich hierzu verpflichtet sind (z.B. Weitergabe von Daten an Steuerbehörden), wenn wir ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO an der Weitergabe haben oder wenn eine sonstige Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von Auftragsverarbeitern geben wir personenbezogene Daten unserer Kunden nur auf Grundlage eines gültigen Vertrags über Auftragsverarbeitung weiter. Im Falle einer gemeinsamen Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung geschlossen.
+          </p>
+
+          <p><strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong></p>
+          <p>
+            Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+          </p>
+
+          <h4>Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21 DSGVO)</h4>
+          <div class="dialog-placeholder-box" style="font-size: 0.85rem; line-height: 1.5;">
+            WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
+			<br>WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
+
+          </div>
+
+          <p><strong>Beschwerderecht bei der zuständigen Aufsichtsbehörde</strong></p>
+          <p>
+            Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+          </p>
+
+          <p><strong>Recht auf Datenübertragbarkeit</strong></p>
+          <p>
+            Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.
+          </p>
+
+          <p><strong>Auskunft, Berichtigung und Löschung</strong></p>
+          <p>
+            Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.
+          </p>
+
+          <p><strong>Recht auf Einschränkung der Verarbeitung</strong></p>
+          <p>
+            Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit an uns wenden. Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:
+          </p>
+          <ul style="padding-left: 1.25rem; margin-bottom: 0.85rem; font-size: 0.92rem; line-height: 1.6;">
+            <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+            <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen.</li>
+            <li>Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+            <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+          </ul>
+		  <p>
+            Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben, dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.
+          </p>
+	
+          <p><strong>SSL- bzw. TLS-Verschlüsselung</strong></p>
+          <p>
+            Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+			<br>Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
+
+          </p>
+
+          <!-- 4. Datenerfassung auf dieser Website -->
+          <h4>4. Datenerfassung auf dieser Website</h4>
+          
+          <p><strong>Anfrage per E-Mail oder Telefon</strong></p>
+          <p>
+            Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+			<br>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.
+			<br>Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.
+
+          </p>
+
+          <p style="margin-top: 1.2rem; font-size: 0.8rem; color: var(--text-dim);">
+            Quelle: <a href="https://www.e-recht24.de" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">https://www.e-recht24.de</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      /* --- 1. 3D CARD STACK WITH AUTO-CYCLE, CLICK & SWIPE --- */
+      const stack = document.getElementById('photoStack');
+      if (stack) {
+        const cards = Array.from(stack.querySelectorAll('.stack-card'));
+        let currentIndex = 0;
+        let isAnimating = false;
+        let autoCycleTimer = null;
+        const CYCLE_INTERVAL = 5000;
+
+        function updatePositions() {
+          cards.forEach((card, i) => {
+            const pos = (i - currentIndex + cards.length) % cards.length;
+            card.setAttribute('data-pos', pos);
+          });
+        }
+
+        function cycleCard() {
+          if (isAnimating || cards.length === 0) return;
+          isAnimating = true;
+
+          const topCard = cards[currentIndex];
+          topCard.classList.add('flipping');
+
+          setTimeout(() => {
+            currentIndex = (currentIndex + 1) % cards.length;
+            updatePositions();
+            topCard.classList.remove('flipping');
+            
+            setTimeout(() => {
+              isAnimating = false;
+            }, 140);
+          }, 300);
+        }
+
+        function startAutoCycle() {
+          stopAutoCycle();
+          autoCycleTimer = setInterval(() => {
+            cycleCard();
+          }, CYCLE_INTERVAL);
+        }
+
+        function stopAutoCycle() {
+          if (autoCycleTimer) {
+            clearInterval(autoCycleTimer);
+            autoCycleTimer = null;
+          }
+        }
+
+        function resetAutoCycle() {
+          stopAutoCycle();
+          startAutoCycle();
+        }
+
+        startAutoCycle();
+
+        stack.addEventListener('mouseenter', stopAutoCycle);
+        stack.addEventListener('mouseleave', startAutoCycle);
+
+        stack.addEventListener('click', () => {
+          cycleCard();
+          resetAutoCycle();
+        });
+
+        let touchStartY = 0;
+        let touchStartX = 0;
+
+        stack.addEventListener('touchstart', (e) => {
+          stopAutoCycle();
+          touchStartY = e.changedTouches[0].screenY;
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        stack.addEventListener('touchend', (e) => {
+          const deltaY = e.changedTouches[0].screenY - touchStartY;
+          const deltaX = e.changedTouches[0].screenX - touchStartX;
+          
+          if (Math.abs(deltaY) > 35 || Math.abs(deltaX) > 35) {
+            cycleCard();
+          }
+          resetAutoCycle();
+        }, { passive: true });
+      }
+
+      /* --- 2. MODAL DIALOG (IMPRESSUM & DATENSCHUTZ) --- */
+      const modal = document.getElementById('legalModal');
+      const closeBtn = document.getElementById('modalCloseBtn');
+      const modalTitle = document.getElementById('legalModalTitle');
+      const impressumSec = document.getElementById('legalSectionImpressum');
+      const datenschutzSec = document.getElementById('legalSectionDatenschutz');
+      const legalBtns = document.querySelectorAll('[data-legal]');
+
+      if (modal) {
+        legalBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-legal');
+            if (target === 'impressum') {
+              modalTitle.textContent = 'Impressum';
+              impressumSec.style.display = 'block';
+              datenschutzSec.style.display = 'none';
+            } else {
+              modalTitle.textContent = 'Datenschutzerklärung';
+              impressumSec.style.display = 'none';
+              datenschutzSec.style.display = 'block';
+            }
+            modal.showModal();
+          });
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => modal.close());
+        }
+
+        // Klick auf den Backdrop schließt das Modal
+        modal.addEventListener('click', (e) => {
+          const rect = modal.getBoundingClientRect();
+          const isInDialog = (
+            rect.top <= e.clientY &&
+            e.clientY <= rect.top + rect.height &&
+            rect.left <= e.clientX &&
+            e.clientX <= rect.left + rect.width
+          );
+          if (!isInDialog) {
+            modal.close();
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
